@@ -2,10 +2,9 @@ import User from "../models/userModel.js";
 import bcrypt from "bcrypt";
 import { errorHandler } from "../utils/error.js";
 import jwt from 'jsonwebtoken';
-import dotenv from 'dotenv';
 
 export const signup = async (req, res, next) => {
-  const { username, email, password } = req.body;s
+  const { username, email, password } = req.body;
 
   const hashedPassword = bcrypt.hashSync(password, 10);
 
